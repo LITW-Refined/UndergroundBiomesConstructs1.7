@@ -426,9 +426,11 @@ public class BiomeUndergroundDecorator {
         this.correctors.add(new VanillaDecoratorCorrector());
         if (ModIds.HIGHLANDS.isLoaded()) {
             this.correctors.add(new HighlandsDecoratorCorrector());
+            UndergroundBiomes.logger.info("Loaded biomes corrector for Highlands");
         }
         if (ModIds.BOP.isLoaded()) {
             this.correctors.add(new BoPDecoratorCorrector());
+            UndergroundBiomes.logger.info("Loaded biomes corrector for Biomes O' Plenty");
         }
     }
 
