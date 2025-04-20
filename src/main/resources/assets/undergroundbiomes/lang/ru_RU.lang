@@ -1,0 +1,339 @@
+﻿# Underground Biomes localization
+# ===============================
+# Blocks
+
+tile.igneousStone.redGranite.name=Красный гранит
+tile.igneousStone.blackGranite.name=Чёрный гранит
+tile.igneousStone.rhyolite.name=Риолит
+tile.igneousStone.andesite.name=Андезит
+tile.igneousStone.gabbro.name=Габбро
+tile.igneousStone.basalt.name=Базальт
+tile.igneousStone.komatiite.name=Коматиит
+tile.igneousStone.dacite.name=Дацит
+
+tile.igneousCobblestone.redGranite.name=Булыжник из красного гранита
+tile.igneousCobblestone.blackGranite.name=Булыжник из чёрного гранита
+tile.igneousCobblestone.rhyolite.name=Риолитовый булыжник
+tile.igneousCobblestone.andesite.name=Андезитовый булыжник
+tile.igneousCobblestone.gabbro.name=Габбровый булыжник
+tile.igneousCobblestone.basalt.name=Базальтовый булыжник
+tile.igneousCobblestone.komatiite.name=Коматиитовый булыжник
+tile.igneousCobblestone.dacite.name=Дацитовый булыжник
+
+tile.igneousStoneBrick.redGranite.name=Кирпич из красного гранита
+tile.igneousStoneBrick.blackGranite.name=Кирпич из чёрного гранита
+tile.igneousStoneBrick.rhyolite.name=Риолитовый кирпич
+tile.igneousStoneBrick.andesite.name=Андезитовый кирпич
+tile.igneousStoneBrick.gabbro.name=Габбровый кирпич
+tile.igneousStoneBrick.basalt.name=Базальтовый кирпич
+tile.igneousStoneBrick.komatiite.name=Коматиитовый кирпич
+tile.igneousStoneBrick.dacite.name=Дацитовый кирпич
+
+tile.metamorphicStone.gneiss.name=Гнейс
+tile.metamorphicStone.eclogite.name=Эклогит
+tile.metamorphicStone.marble.name=Мрамор
+tile.metamorphicStone.quartzite.name=Кварцит
+tile.metamorphicStone.blueschist.name=Синий сланец
+tile.metamorphicStone.greenschist.name=Зелёный сланец
+tile.metamorphicStone.soapstone.name=Талькохлорит
+tile.metamorphicStone.migmatite.name=Мигматит
+
+tile.metamorphicCobblestone.gneiss.name=Гнейсовый булыжник
+tile.metamorphicCobblestone.eclogite.name=Эклогитовый булыжник
+tile.metamorphicCobblestone.marble.name=Мраморный булыжник
+tile.metamorphicCobblestone.quartzite.name=Кварцитовый булыжник
+tile.metamorphicCobblestone.blueschist.name=Булыжник из синего сланца
+tile.metamorphicCobblestone.greenschist.name=Булыжник из зелёного сланца
+tile.metamorphicCobblestone.soapstone.name=Талькохлоритный булыжник
+tile.metamorphicCobblestone.migmatite.name=Мигматитовый булыжник
+
+tile.metamorphicStoneBrick.gneiss.name=Гнейсовый кирпич
+tile.metamorphicStoneBrick.eclogite.name=Эклогитовый кирпич
+tile.metamorphicStoneBrick.marble.name=Мраморный кирпич
+tile.metamorphicStoneBrick.quartzite.name=Кварцитовый кирпич
+tile.metamorphicStoneBrick.blueschist.name=Кирпич из синего сланца
+tile.metamorphicStoneBrick.greenschist.name=Кирпич из зелёного сланца
+tile.metamorphicStoneBrick.soapstone.name=Талькохлоритовый кирпич
+tile.metamorphicStoneBrick.migmatite.name=Мигматитовый кирпич
+
+tile.sedimentaryStone.limestone.name=Известняк
+tile.sedimentaryStone.chalk.name=Мел
+tile.sedimentaryStone.shale.name=Глинистый сланец
+tile.sedimentaryStone.siltstone.name=Алеврит
+tile.sedimentaryStone.ligniteBlock.name=Блок бурого угля
+tile.sedimentaryStone.dolomite.name=Доломит
+tile.sedimentaryStone.greywacke.name=Граувакка
+tile.sedimentaryStone.chert.name=Кремнистый сланец
+
+tile.igneousStoneBrickSlab.redGranite.name=Плита из кирпича красного гранита
+tile.igneousStoneBrickSlab.blackGranite.name=Плита из кирпича чёрного гранита
+tile.igneousStoneBrickSlab.rhyolite.name=Плита из риолитового кирпича
+tile.igneousStoneBrickSlab.andesite.name=Плита из андезитового кирпича
+tile.igneousStoneBrickSlab.gabbro.name=Плита из габбрового кирпича
+tile.igneousStoneBrickSlab.basalt.name=Плита из базальтового кирпича
+tile.igneousStoneBrickSlab.komatiite.name=Плита из коматиитового кирпича
+tile.igneousStoneBrickSlab.dacite.name=Плита из дацитового кирпича
+
+tile.metamorphicStoneBrickSlab.gneiss.name=Плита из гнейсового кирпича
+tile.metamorphicStoneBrickSlab.eclogite.name=Плита из эклогитового кирпича
+tile.metamorphicStoneBrickSlab.marble.name=Плита из мраморного кирпича
+tile.metamorphicStoneBrickSlab.quartzite.name=Плита из кварцитового кирпича
+tile.metamorphicStoneBrickSlab.blueschist.name=Плита из кирпича синего сланца
+tile.metamorphicStoneBrickSlab.greenschist.name=Плита из кирпича зелёного сланца
+tile.metamorphicStoneBrickSlab.soapstone.name=Плита из талькохлоритного кирпича
+tile.metamorphicStoneBrickSlab.migmatite.name=Плита из мигматитового кирпича
+
+tile.igneousStoneSlab.redGranite.name=Плита из красного гранита
+tile.igneousStoneSlab.blackGranite.name=Плита из чёрного гранита
+tile.igneousStoneSlab.rhyolite.name=Риолитовая плита
+tile.igneousStoneSlab.andesite.name=Андезитовая плита
+tile.igneousStoneSlab.gabbro.name=Габбровая плита
+tile.igneousStoneSlab.basalt.name=Базальтовая плита
+tile.igneousStoneSlab.komatiite.name=Коматиитовая плита
+tile.igneousStoneSlab.dacite.name=Дацитовая плита
+
+tile.metamorphicStoneSlab.gneiss.name=Гнейсовая плита
+tile.metamorphicStoneSlab.eclogite.name=Эклогитовая плита
+tile.metamorphicStoneSlab.marble.name=Мраморная плита
+tile.metamorphicStoneSlab.quartzite.name=Кварцитовая плита
+tile.metamorphicStoneSlab.blueschist.name=Плита из синего сланца
+tile.metamorphicStoneSlab.greenschist.name=Плита из зелёного сланца
+tile.metamorphicStoneSlab.soapstone.name=Талькохлоритовая плита
+tile.metamorphicStoneSlab.migmatite.name=Мигматитовая плита
+
+tile.igneousCobblestoneSlab.redGranite.name=Плита из булыжника красного гранита
+tile.igneousCobblestoneSlab.blackGranite.name=Плита из булыжника чёрного гранита
+tile.igneousCobblestoneSlab.rhyolite.name=Плита из риолитового булыжника
+tile.igneousCobblestoneSlab.andesite.name=Плита из андезитового булыжника
+tile.igneousCobblestoneSlab.gabbro.name=Плита из габбрового булыжника
+tile.igneousCobblestoneSlab.basalt.name=Плита из базальтового булыжника
+tile.igneousCobblestoneSlab.komatiite.name=Плита из коматиитового булыжника
+tile.igneousCobblestoneSlab.dacite.name=Плита из дацитового булыжника
+
+tile.metamorphicCobblestoneSlab.gneiss.name=Плита из гнейсового булыжника
+tile.metamorphicCobblestoneSlab.eclogite.name=Плита из эклогитового булыжника
+tile.metamorphicCobblestoneSlab.marble.name=Плита из мраморного булыжника
+tile.metamorphicCobblestoneSlab.quartzite.name=Плита из кварцитового булыжника
+tile.metamorphicCobblestoneSlab.blueschist.name=Плита из булыжника синего сланца
+tile.metamorphicCobblestoneSlab.greenschist.name=Плита из булыжника зелёного сланца
+tile.metamorphicCobblestoneSlab.soapstone.name=Плита из талькохлоритного булыжника
+tile.metamorphicCobblestoneSlab.migmatite.name=Плита из мигматитового булыжника
+
+tile.sedimentaryStoneSlab.limestone.name=Известняковая плита
+tile.sedimentaryStoneSlab.chalk.name=Меловая плита
+tile.sedimentaryStoneSlab.shale.name=Плита из глинистого сланца
+tile.sedimentaryStoneSlab.siltstone.name=Алевритовая плита
+tile.sedimentaryStoneSlab.ligniteBlock.name=Плита из бурого угля
+tile.sedimentaryStoneSlab.dolomite.name=Доломитовая плита
+tile.sedimentaryStoneSlab.greywacke.name=Плита из граувакка
+tile.sedimentaryStoneSlab.chert.name=Плита из кремнистого сланца
+
+tile.anthraciteCoal.name=Антрацитовый блок
+
+# Underground Biomes Constructs localization
+# ===============================
+# Blocks
+
+tile.igneousStone.redGranite.stairs.name=Ступеньки из красного гранита
+tile.igneousStone.blackGranite.stairs.name=Ступеньки из чёрного гранита
+tile.igneousStone.rhyolite.stairs.name=Риолитовые ступеньки
+tile.igneousStone.andesite.stairs.name=Андезитовые ступеньки
+tile.igneousStone.gabbro.stairs.name=Габбровые ступеньки
+tile.igneousStone.basalt.stairs.name=Базальтовые ступеньки
+tile.igneousStone.komatiite.stairs.name=Коматиитовые ступеньки
+tile.igneousStone.dacite.stairs.name=Дацитовые ступеньки
+
+tile.igneousCobblestone.redGranite.stairs.name=Ступеньки из булыжника красного гранита
+tile.igneousCobblestone.blackGranite.stairs.name=Ступеньки из булыжника чёрного гранита
+tile.igneousCobblestone.rhyolite.stairs.name=Ступеньки из риолитового булыжника
+tile.igneousCobblestone.andesite.stairs.name=Ступеньки из андезитового булыжника
+tile.igneousCobblestone.gabbro.stairs.name=Ступеньки из габбрового булыжника
+tile.igneousCobblestone.basalt.stairs.name=Ступеньки из базальтового булыжника
+tile.igneousCobblestone.komatiite.stairs.name=Ступеньки из коматиитового булыжника
+tile.igneousCobblestone.dacite.stairs.name=Ступеньки из дацитового булыжника
+
+tile.igneousStoneBrick.redGranite.stairs.name=Ступеньки из кирпича красного гранита
+tile.igneousStoneBrick.blackGranite.stairs.name=Ступеньки из кирпича чёрного гранита
+tile.igneousStoneBrick.rhyolite.stairs.name=Ступеньки из риолитового кирпича
+tile.igneousStoneBrick.andesite.stairs.name=Ступеньки из андезитового кирпича
+tile.igneousStoneBrick.gabbro.stairs.name=Ступеньки из габбрового кирпича
+tile.igneousStoneBrick.basalt.stairs.name=Ступеньки из базальтового кирпича
+tile.igneousStoneBrick.komatiite.stairs.name=Ступеньки из коматиитового кирпича
+tile.igneousStoneBrick.dacite.stairs.name=Ступеньки из дацитового кирпича
+
+tile.metamorphicStone.gneiss.stairs.name=Гнейсовые ступеньки
+tile.metamorphicStone.eclogite.stairs.name=Эклогитовые ступеньки
+tile.metamorphicStone.marble.stairs.name=Мраморные ступеньки
+tile.metamorphicStone.quartzite.stairs.name=Кварцитовые ступеньки
+tile.metamorphicStone.blueschist.stairs.name=Ступеньки из синего сланца
+tile.metamorphicStone.greenschist.stairs.name=Ступеньки из зелёного сланца
+tile.metamorphicStone.soapstone.stairs.name=Талькохлоритовые ступеньки
+tile.metamorphicStone.migmatite.stairs.name=Мигматитовые ступеньки
+
+tile.metamorphicCobblestone.gneiss.stairs.name=Ступеньки из гнейсового булыжника
+tile.metamorphicCobblestone.eclogite.stairs.name=Ступеньки из эклогитового булыжника
+tile.metamorphicCobblestone.marble.stairs.name=Ступеньки из мраморного булыжника
+tile.metamorphicCobblestone.quartzite.stairs.name=Ступеньки из кварцитового булыжника
+tile.metamorphicCobblestone.blueschist.stairs.name=Ступеньки из булыжника синего сланца
+tile.metamorphicCobblestone.greenschist.stairs.name=Ступеньки из булыжника зелёного сланца
+tile.metamorphicCobblestone.soapstone.stairs.name=Ступеньки из талькохлоритного булыжника
+tile.metamorphicCobblestone.migmatite.stairs.name=Ступеньки из мигматитового булыжника
+
+tile.metamorphicStoneBrick.gneiss.stairs.name=Ступеньки из гнейсового кирпича
+tile.metamorphicStoneBrick.eclogite.stairs.name=Ступеньки из эклогитового кирпича
+tile.metamorphicStoneBrick.marble.stairs.name=Ступеньки из мраморного кирпича
+tile.metamorphicStoneBrick.quartzite.stairs.name=Ступеньки из кварцитового кирпича
+tile.metamorphicStoneBrick.blueschist.stairs.name=Ступеньки из кирпича синего сланца
+tile.metamorphicStoneBrick.greenschist.stairs.name=Ступеньки из кирпича зелёного сланца
+tile.metamorphicStoneBrick.soapstone.stairs.name=Ступеньки из талькохлоритного кирпича
+tile.metamorphicStoneBrick.migmatite.stairs.name=Ступеньки из мигматитового кирпича
+
+tile.sedimentaryStone.limestone.stairs.name=Известняковые ступеньки
+tile.sedimentaryStone.chalk.stairs.name=Меловые ступеньки
+tile.sedimentaryStone.shale.stairs.name=Ступеньки из глинистого сланца
+tile.sedimentaryStone.siltstone.stairs.name=Алевритовые ступеньки
+tile.sedimentaryStone.ligniteBlock.stairs.name=Ступеньки из бурого угля
+tile.sedimentaryStone.dolomite.stairs.name=Доломитовые ступеньки
+tile.sedimentaryStone.greywacke.stairs.name=Ступеньки из граувакка
+tile.sedimentaryStone.chert.stairs.name=Ступеньки из кремнистого сланца
+
+tile.igneousStone.redGranite.wall.name=Стена из красного гранита
+tile.igneousStone.blackGranite.wall.name=Стена из чёрного гранита
+tile.igneousStone.rhyolite.wall.name=Риолитовая стена
+tile.igneousStone.andesite.wall.name=Андезитовая стена
+tile.igneousStone.gabbro.wall.name=Габбровая стена
+tile.igneousStone.basalt.wall.name=Базальтовая стена
+tile.igneousStone.komatiite.wall.name=Коматиитовая стена
+tile.igneousStone.dacite.wall.name=Дацитовая стена
+
+tile.igneousCobblestone.redGranite.wall.name=Стена из булыжника красного гранита
+tile.igneousCobblestone.blackGranite.wall.name=Стена из булыжника чёрного гранита
+tile.igneousCobblestone.rhyolite.wall.name=Стена из риолитового булыжника
+tile.igneousCobblestone.andesite.wall.name=Стена из андезитового булыжника
+tile.igneousCobblestone.gabbro.wall.name=Стена из габбрового булыжника
+tile.igneousCobblestone.basalt.wall.name=Стена из базальтового булыжника
+tile.igneousCobblestone.komatiite.wall.name=Стена из коматиитового булыжника
+tile.igneousCobblestone.dacite.wall.name=Стена из дацитового булыжника
+
+tile.igneousStoneBrick.redGranite.wall.name=Стена из кирпича красного гранита
+tile.igneousStoneBrick.blackGranite.wall.name=Стена из кирпича чёрного гранита
+tile.igneousStoneBrick.rhyolite.wall.name=Стена из риолитового кирпича
+tile.igneousStoneBrick.andesite.wall.name=Стена из андезитового кирпича
+tile.igneousStoneBrick.gabbro.wall.name=Стена из габбрового кирпича
+tile.igneousStoneBrick.basalt.wall.name=Стена из базальтового кирпича
+tile.igneousStoneBrick.komatiite.wall.name=Стена из коматиитового кирпича
+tile.igneousStoneBrick.dacite.wall.name=Стена из дацитового кирпича
+
+tile.metamorphicStone.gneiss.wall.name=Гнейсовая стена
+tile.metamorphicStone.eclogite.wall.name=Эклогитовая стена
+tile.metamorphicStone.marble.wall.name=Мраморная стена
+tile.metamorphicStone.quartzite.wall.name=Кварцитовая стена
+tile.metamorphicStone.blueschist.wall.name=Стена из синего сланца
+tile.metamorphicStone.greenschist.wall.name=Стена из зелёного сланца
+tile.metamorphicStone.soapstone.wall.name=Талькохлоритовая стена
+tile.metamorphicStone.migmatite.wall.name=Мигматитовая стена
+
+tile.metamorphicCobblestone.gneiss.wall.name=Стена из гнейсового булыжника
+tile.metamorphicCobblestone.eclogite.wall.name=Стена из эклогитового булыжника
+tile.metamorphicCobblestone.marble.wall.name=Стена из мраморного булыжника
+tile.metamorphicCobblestone.quartzite.wall.name=Стена из кварцитового булыжника
+tile.metamorphicCobblestone.blueschist.wall.name=Стена из булыжника синего сланца
+tile.metamorphicCobblestone.greenschist.wall.name=Стена из булыжника зелёного сланца
+tile.metamorphicCobblestone.soapstone.wall.name=Стена из талькохлоритного булыжника
+tile.metamorphicCobblestone.migmatite.wall.name=Стена из мигматитового булыжника
+
+tile.metamorphicStoneBrick.gneiss.wall.name=Стена из гнейсового кирпича
+tile.metamorphicStoneBrick.eclogite.wall.name=Стена из эклогитового кирпича
+tile.metamorphicStoneBrick.marble.wall.name=Стена из мраморного кирпича
+tile.metamorphicStoneBrick.quartzite.wall.name=Стена из кварцитового кирпича
+tile.metamorphicStoneBrick.blueschist.wall.name=Стена из кирпича синего сланца
+tile.metamorphicStoneBrick.greenschist.wall.name=Стена из кирпича зелёного сланца
+tile.metamorphicStoneBrick.soapstone.wall.name=Стена из талькохлоритного кирпича
+tile.metamorphicStoneBrick.migmatite.wall.name=Стена из мигматитового кирпича
+
+tile.sedimentaryStone.limestone.wall.name=Известняковая стена
+tile.sedimentaryStone.chalk.wall.name=Меловая стена
+tile.sedimentaryStone.shale.wall.name=Стена из глинистого сланца
+tile.sedimentaryStone.siltstone.wall.name=Алевритовая стена
+tile.sedimentaryStone.ligniteBlock.wall.name=Стена из бурого угля
+tile.sedimentaryStone.dolomite.wall.name=Доломитовая стена
+tile.sedimentaryStone.greywacke.wall.name=Стена из граувакка
+tile.sedimentaryStone.chert.wall.name=Стена из кремнистого сланца
+
+tile.igneousStone.redGranite.button.name=Кнопка из красного гранита
+tile.igneousStone.blackGranite.button.name=Кнопка из чёрного гранита
+tile.igneousStone.rhyolite.button.name=Риолитовая кнопка
+tile.igneousStone.andesite.button.name=Андезитовая кнопка
+tile.igneousStone.gabbro.button.name=Габбровая кнопка
+tile.igneousStone.basalt.button.name=Базальтовая кнопка
+tile.igneousStone.komatiite.button.name=Коматиитовая кнопка
+tile.igneousStone.dacite.button.name=Дацитовая кнопка
+
+tile.igneousCobblestone.redGranite.button.name=Кнопка из булыжника красного гранита
+tile.igneousCobblestone.blackGranite.button.name=Кнопка из булыжника чёрного гранита
+tile.igneousCobblestone.rhyolite.button.name=Кнопка из риолитового булыжника
+tile.igneousCobblestone.andesite.button.name=Кнопка из андезитового булыжника
+tile.igneousCobblestone.gabbro.button.name=Кнопка из габбрового булыжника
+tile.igneousCobblestone.basalt.button.name=Кнопка из базальтового булыжника
+tile.igneousCobblestone.komatiite.button.name=Кнопка из коматиитового булыжника
+tile.igneousCobblestone.dacite.button.name=Кнопка из дацитового булыжника
+
+tile.igneousStoneBrick.redGranite.button.name=Кнопка из кирпича красного гранита
+tile.igneousStoneBrick.blackGranite.button.name=Кнопка из кирпича чёрного гранита
+tile.igneousStoneBrick.rhyolite.button.name=Кнопка из риолитового кирпича
+tile.igneousStoneBrick.andesite.button.name=Кнопка из андезитового кирпича
+tile.igneousStoneBrick.gabbro.button.name=Кнопка из габбрового кирпича
+tile.igneousStoneBrick.basalt.button.name=Кнопка из базальтового кирпича
+tile.igneousStoneBrick.komatiite.button.name=Кнопка из коматиитового кирпича
+tile.igneousStoneBrick.dacite.button.name=Кнопка из дацитового кирпича
+
+tile.metamorphicStone.gneiss.button.name=Гнейсовая кнопка
+tile.metamorphicStone.eclogite.button.name=Эклогитовая кнопка
+tile.metamorphicStone.marble.button.name=Мраморная кнопка
+tile.metamorphicStone.quartzite.button.name=Кварцитовая кнопка
+tile.metamorphicStone.blueschist.button.name=Кнопка из синего сланца
+tile.metamorphicStone.greenschist.button.name=Кнопка из зелёного сланца
+tile.metamorphicStone.soapstone.button.name=Талькохлоритовая кнопка
+tile.metamorphicStone.migmatite.button.name=Мигматитовая кнопка
+
+tile.metamorphicCobblestone.gneiss.button.name=Кнопка из гнейсового булыжника
+tile.metamorphicCobblestone.eclogite.button.name=Кнопка из эклогитового булыжника
+tile.metamorphicCobblestone.marble.button.name=Кнопка из мраморного булыжника
+tile.metamorphicCobblestone.quartzite.button.name=Кнопка из кварцитового булыжника
+tile.metamorphicCobblestone.blueschist.button.name=Кнопка из булыжника синего сланца
+tile.metamorphicCobblestone.greenschist.button.name=Кнопка из булыжника зелёного сланца
+tile.metamorphicCobblestone.soapstone.button.name=Кнопка из талькохлоритного булыжника
+tile.metamorphicCobblestone.migmatite.button.name=Кнопка из мигматитового булыжника
+
+tile.metamorphicStoneBrick.gneiss.button.name=Кнопка из гнейсового кирпича
+tile.metamorphicStoneBrick.eclogite.button.name=Кнопка из эклогитового кирпича
+tile.metamorphicStoneBrick.marble.button.name=Кнопка из мраморного кирпича
+tile.metamorphicStoneBrick.quartzite.button.name=Кнопка из кварцитового кирпича
+tile.metamorphicStoneBrick.blueschist.button.name=Кнопка из кирпича синего сланца
+tile.metamorphicStoneBrick.greenschist.button.name=Кнопка из кирпича зелёного сланца
+tile.metamorphicStoneBrick.soapstone.button.name=Кнопка из талькохлоритного кирпича
+tile.metamorphicStoneBrick.migmatite.button.name=Кнопка из мигматитового кирпича
+
+tile.sedimentaryStone.limestone.button.name=Известняковая кнопка
+tile.sedimentaryStone.chalk.button.name=Меловая кнопка
+tile.sedimentaryStone.shale.button.name=Кнопка из глинистого сланца
+tile.sedimentaryStone.siltstone.button.name=Алевритовая кнопка
+tile.sedimentaryStone.ligniteBlock.button.name=Кнопка из бурого угля
+tile.sedimentaryStone.dolomite.button.name=Доломитовая кнопка
+tile.sedimentaryStone.greywacke.button.name=Кнопка из граувакка
+tile.sedimentaryStone.chert.button.name=Кнопка из кремнистого сланца
+
+# Items
+
+item.ligniteCoal.name=Бурый уголь
+item.fossilPiece.ammonite.name=Ископаемый аммонит
+item.fossilPiece.shell.name=Ископаемая ракушка
+item.fossilPiece.bone.name=Ископаемая кость
+item.fossilPiece.boneshard.name=Ископаемый осколок кости
+item.fossilPiece.rib.name=Ископаемое ребро
+item.fossilPiece.skull.name=Ископаемый череп
+
+# Creative Tabs
+
+itemGroup.undergroundBiomesBlocks=Underground Biomes: Блоки
+itemGroup.undergroundBiomesItems=Underground Biomes: Предметы
