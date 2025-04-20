@@ -4,7 +4,6 @@ package exterminatorJeff.undergroundBiomes.worldGen;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.logging.Logger;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -18,7 +17,6 @@ import Zeno410Utils.Function;
 import Zeno410Utils.KeyedRegistry;
 import Zeno410Utils.MinecraftName;
 import Zeno410Utils.Mutable;
-import Zeno410Utils.Zeno410Logger;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import exterminatorJeff.undergroundBiomes.api.NamedBlock;
@@ -40,8 +38,6 @@ import exterminatorJeff.undergroundBiomes.common.item.ItemUBOreBlock;
  * @author Zeno410
  */
 public final class OreUBifier {
-
-    public static Logger logger = new Zeno410Logger("OreUBifier").logger();
 
     private boolean replacementActive;
     private UBVersionsDictionary blockReplacer = new UBVersionsDictionary();
@@ -119,9 +115,7 @@ public final class OreUBifier {
             rockName + "_"
                 + oreBlock.getUnlocalizedName()
                     .substring(5));
-        BlockOverlay.logger.info("block " + oreBlock + " no metadata ");
         GameRegistry.registerBlock(ubOre, ItemUBOreBlock.class, namer.internal());
-        // BlockOverlay.logger.info(namer.internal());
         // all the metadatas get replaced
         for (int i = 0; i < 16; i++) {
             blockReplacer.item(oreBlock).ubversions[i].set(ubStone, ubOre);
@@ -132,7 +126,6 @@ public final class OreUBifier {
         int blockID = Block.getIdFromBlock(ubOre);
         Item matchedItem = Item.getItemById(blockID);
         Block matchedBlock = Block.getBlockFromItem(matchedItem);
-        // BlockOverlay.logger.info("block "+blockID+" matched to "+matchedItem.toString()+" for
         // "+matchedBlock.getUnlocalizedName());
     }
 
@@ -142,9 +135,7 @@ public final class OreUBifier {
             rockName + "_"
                 + oreBlock.getUnlocalizedName()
                     .substring(5));
-        BlockOverlay.logger.info("block " + oreBlock + " no metadata ");
         GameRegistry.registerBlock(ubOre, ItemUBHiddenBlock.class, namer.internal());
-        // BlockOverlay.logger.info(namer.internal());
         // all the metadatas get replaced
         for (int i = 0; i < 16; i++) {
             blockReplacer.item(oreBlock).ubversions[i].set(ubStone, ubOre);
@@ -160,12 +151,10 @@ public final class OreUBifier {
         // overlayName.replace("metallurgy:/", "metallurgy:");
         // overlayName = "Metallurgy:"+overlayName.substring("metallurgy:/".length());
         BlockOverlay overlay = new BlockOverlay(overlayName);
-        logger.info(metadataBlockName.localized() + " " + metadataBlockName.unlocalized());
 
         BlockState oreBlockState = new BlockState(oreBlock, metadata);
         BlockUBOre ubOre = new BlockUBMetadataOre(ubStone, oreBlockState, overlay, renderID, metadataBlockName);
         NamedBlock namer = null;
-        BlockOverlay.logger.info("block " + oreBlock + " metadata " + metadata + " " + overlayName);
         if (metadata == 0) {
             namer = new NamedBlock(
                 rockName + "_"
@@ -180,7 +169,6 @@ public final class OreUBifier {
                     + metadata);
         }
         GameRegistry.registerBlock(ubOre, ItemUBOreBlock.class, namer.internal());
-        // BlockOverlay.logger.info(namer.internal());
         blockReplacer.item(oreBlock).ubversions[metadata].set(ubStone, ubOre);
         oreFor.put(ubOre, new ItemStack(oreBlock, 1, metadata));
         overlayFor.put(ubOre, overlay);
@@ -194,17 +182,10 @@ public final class OreUBifier {
         BlockState replacement = this.replacement(oreBlock, metadata, testUBStone, testUBStone);
         if ((!(replaces(oreBlock, metadata))) && replacementActive) {
             if (UndergroundBiomes.crashOnProblems()) {
-                BlockOverlay.logger.info(
-                    "blueschist instanceof BlockMetadataBase " + (testUBStone.block instanceof BlockMetadataBase));
                 MetadataUBVersions versions = blockReplacer.item(oreBlock);
                 for (int i = 0; i < 16; i++) {
                     Block ore = versions.ubversions[i].ore((BlockMetadataBase) (testUBStone.block))
                         .block();
-                    if (ore == null) {
-                        BlockOverlay.logger.info("null in " + i);
-                    } else {
-                        BlockOverlay.logger.info(ore.getLocalizedName() + " " + ore.toString() + i);
-                    }
                 }
                 throw new RuntimeException();
             }
@@ -220,7 +201,6 @@ public final class OreUBifier {
             if (UndergroundBiomes.crashOnProblems()) throw new RuntimeException();
         }
 
-        // BlockOverlay.logger.info("block "+blockID+" matched to "+matchedItem.toString()+" for
         // "+matchedBlock.getUnlocalizedName());
     }
 
@@ -336,7 +316,6 @@ public final class OreUBifier {
              * Code to test for missed ores
              * if (result == false) {
              * if (this.replacedBlockClasses.contains(possibleOre.getClass())) {
-             * BlockOverlay.logger.info(possibleOre.toString() + " " + metadata + " " +
              * possibleOre.getClass().toString());
              * }
              * }

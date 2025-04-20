@@ -18,7 +18,6 @@ public class UndergroundBiomesTileEntity extends TileEntity {
 
     public static String IndexName = "index";
     private int masterIndex;
-    // public static Logger logger = new Zeno410Logger("TileEntity").logger();
 
     public UndergroundBiomesTileEntity() {
 

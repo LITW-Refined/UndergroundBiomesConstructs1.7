@@ -2,7 +2,6 @@
 package exterminatorJeff.undergroundBiomes.common;
 
 import java.util.HashSet;
-import java.util.logging.Logger;
 
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
@@ -10,7 +9,6 @@ import net.minecraft.world.World;
 import com.teammetallurgy.metallurgy.metals.MetalBlock;
 
 import Zeno410Utils.MinecraftName;
-import Zeno410Utils.Zeno410Logger;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import exterminatorJeff.undergroundBiomes.api.UBAPIHook;
 import exterminatorJeff.undergroundBiomes.api.UBOreTexturizer;
@@ -21,7 +19,6 @@ import exterminatorJeff.undergroundBiomes.api.UBOreTexturizer;
  */
 public class OreUBifyRequester implements UBOreTexturizer {
 
-    private static Logger logger = new Zeno410Logger("OrUBifyRequester").logger();
     private HashSet<UBifyRequest> waitingRequests = new HashSet<UBifyRequest>();
     private boolean alreadyRun = false;
 
@@ -31,7 +28,6 @@ public class OreUBifyRequester implements UBOreTexturizer {
 
     @Deprecated
     public void setupUBOre(Block oreBlock, int metadata, String overlayName, FMLPreInitializationEvent event) {
-        logger.info("setup attempt");
         assert (oreBlock != null);
         assert (metadata >= 0);
         assert (metadata < 16);
@@ -43,12 +39,10 @@ public class OreUBifyRequester implements UBOreTexturizer {
 
     @Deprecated
     public void requestUBOreSetup(Block oreBlock, int metadata, String overlayName) throws BlocksAreAlreadySet {
-        logger.info("setup request for " + oreBlock.getLocalizedName() + " " + overlayName);
         assert (oreBlock != null);
         assert (metadata >= 0);
         assert (metadata < 16);
         assert (overlayName != null);
-        logger.info("request OK");
         waitingRequests.add(new UBifyRequestWithMetadata(oreBlock, metadata, overlayName));
     }
 
@@ -66,7 +60,6 @@ public class OreUBifyRequester implements UBOreTexturizer {
 
     public void requestUBOreSetup(Block oreBlock, int metadata, String overlayName, String blockName)
         throws BlocksAreAlreadySet {
-        logger.info("setup request for " + oreBlock.getLocalizedName() + " : " + blockName + " " + overlayName);
         assert (oreBlock != null);
         assert (metadata >= 0);
         assert (metadata < 16);
@@ -76,10 +69,8 @@ public class OreUBifyRequester implements UBOreTexturizer {
             properName = minecraftName(oreBlock, metadata);
             if (!properName.legit()) {
                 new MinecraftName(blockName);
-                logger.info(blockName + " not found in the language tables");
             }
         }
-        logger.info("request OK");
         waitingRequests.add(new UBifyRequestWithMetadata(oreBlock, metadata, overlayName, properName));
     }
 
@@ -129,7 +120,6 @@ public class OreUBifyRequester implements UBOreTexturizer {
         if (alreadyRun) {
             BlocksAreAlreadySet error = new BlocksAreAlreadySet(oreBlock, overlayName);
             if (UndergroundBiomes.crashOnProblems()) throw error;
-            UndergroundBiomes.logger.severe(error.toString());
         } else {
             waitingRequests.add(new UBifyRequest(oreBlock, overlayName));
         }
@@ -151,10 +141,6 @@ public class OreUBifyRequester implements UBOreTexturizer {
 
     private static MinecraftName minecraftName(Block block, int meta) {
         if (block instanceof MetalBlock) {
-            logger.info(((MetalBlock) block).getUnlocalizedName(meta) + " " + meta);
-            logger.info(((MetalBlock) block).getUnlocalizedName(0) + " " + 0);
-            logger.info(((MetalBlock) block).getUnlocalizedName(1) + " " + 1);
-            logger.info(((MetalBlock) block).getUnlocalizedName(2) + " " + 2);
             return new MinecraftName(((MetalBlock) block).getUnlocalizedName(meta));
         }
         return new MinecraftName(block.getUnlocalizedName());

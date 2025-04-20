@@ -28,7 +28,6 @@ import exterminatorJeff.undergroundBiomes.worldGen.OreUBifier;
 
 public class RenderUBOre implements ISimpleBlockRenderingHandler {
 
-    // public static Logger logger = new Zeno410Logger("OreRenderer").logger();
     private int renderType;
     private final OreUBifier ubifier;
 

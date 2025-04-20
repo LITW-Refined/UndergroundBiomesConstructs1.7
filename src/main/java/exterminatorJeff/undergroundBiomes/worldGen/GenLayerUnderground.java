@@ -3,7 +3,6 @@ package exterminatorJeff.undergroundBiomes.worldGen;
 import net.minecraft.world.gen.layer.*;
 
 import exterminatorJeff.undergroundBiomes.api.UndergroundBiomeSet;
-import exterminatorJeff.undergroundBiomes.common.WorldGenManager;
 
 public abstract class GenLayerUnderground extends GenLayer {
 
@@ -48,7 +47,6 @@ public abstract class GenLayerUnderground extends GenLayer {
         var8.initWorldGenSeed(par0);
         // testGenerator(var8, size);
         // testBiomeSize(var8);
-        WorldGenManager.logger.info("initializing underground biome generators");
 
         return new GenLayer[] { var19, var8, var19 };
     }
@@ -65,13 +63,10 @@ public abstract class GenLayerUnderground extends GenLayer {
         for (int i = 0; i < 30; i++) {
             for (int j = 0; j < 30; j++) {
                 int biome = generator.getInts(i * multiplier, j * multiplier, 16, 16)[0];
-                WorldGenManager.logger.info("biome " + biome + " from " + i * multiplier + " " + j * multiplier);
                 hits[biome]++;
             }
         }
-        for (int biomeType = 0; biomeType < numberBiomes; biomeType++) {
-            WorldGenManager.logger.info("biome " + biomeType + " hits " + hits[biomeType]);
-        }
+        for (int biomeType = 0; biomeType < numberBiomes; biomeType++) {}
 
         testing = false;
 
@@ -84,7 +79,6 @@ public abstract class GenLayerUnderground extends GenLayer {
         for (int i = 10; i < length; i += 10) {
             int newBiome = generator.getInts(i, 0, 16, 16)[0];
             if (newBiome != currentBiome) {
-                WorldGenManager.logger.info("biome " + currentBiome + " length " + (i - currentStart));
                 currentStart = i;
                 currentBiome = newBiome;
             }

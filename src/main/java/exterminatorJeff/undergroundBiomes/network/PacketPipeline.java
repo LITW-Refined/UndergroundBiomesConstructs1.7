@@ -110,7 +110,6 @@ public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, Abstra
         }
 
         AbstractPacket pkt = clazz.incomingPacket();
-        // AtlasData.logger.info("decoding channel "+discriminator);
         pkt.decodeInto(ctx, payload.slice());
 
         EntityPlayer player;
@@ -297,7 +296,6 @@ public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, Abstra
         }
 
         public final void sendTo(Type sent, EntityPlayerMP player) {
-            // AtlasData.logger.info("send "+discriminator + " to " + player.getDisplayName()+ " " + sent.toString());
             PacketPipeline.this.sendTo(new ChannelizedPacket(source.outgoingMessage(sent), this), player);
 
         }
@@ -308,7 +306,6 @@ public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, Abstra
         }
 
         public final void sendServer(Type sent) {
-            // AtlasData.logger.info("send server "+discriminator + " " + sent.toString());
             sendToServer(new ChannelizedPacket(source.outgoingMessage(sent), this));
 
         }

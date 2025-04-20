@@ -2,14 +2,12 @@
 package Zeno410Utils;
 
 import java.io.File;
-import java.util.logging.Logger;
 
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.common.config.Configuration;
 
 public class ConfigManager<Type extends Settings> {
 
-    static Logger logger = new Zeno410Logger("ConfigManager").logger();
     public final static String CONFIG_DIRECTORY = "worldSpecificConfig";
     private Configuration general;
     private File generalConfigFile;
@@ -37,14 +35,11 @@ public class ConfigManager<Type extends Settings> {
             worldConfigFile = newFile;
             if (usable(worldConfigFile)) {
                 // usable world
-                logger.info(worldConfigFile.getPath());
                 if (newFile.exists()) {
                     worldSpecific = new Configuration(worldConfigFile);
-                    logger.info("exists ");
                     worldSpecific.load();
                     settings.readFrom(worldSpecific);
                 } else {
-                    logger.info("doesn't exist");
                     worldSpecific = new Configuration(worldConfigFile);
                     // else we use the default;
                     settings.readFrom(general);
@@ -52,7 +47,6 @@ public class ConfigManager<Type extends Settings> {
                 }
                 worldSpecific.save();
             } else {
-                logger.info("null file");
                 worldSpecific = null;
                 settings.readFrom(general);
             }
@@ -68,7 +62,6 @@ public class ConfigManager<Type extends Settings> {
         String generalConfigDirectoryName = generalConfigFile.getParentFile()
             .getPath();
         String detailName = configName.substring(generalConfigDirectoryName.length() + 1);
-        logger.info("Filename " + detailName);
         File localConfigFile = new File(configDirectory, detailName);
         setWorldConfigFile(localConfigFile);
     }
@@ -76,7 +69,6 @@ public class ConfigManager<Type extends Settings> {
     public void clearWorldFile() {
         worldConfigFile = null;
         worldSpecific = null;
-        logger.info("clearing ");
     }
 
     public void setWorldFile(WorldServer server) {
@@ -90,7 +82,6 @@ public class ConfigManager<Type extends Settings> {
      */
     /*
      * public class ConfigManager<Type extends Settings> {
-     * static Logger logger = new Zeno410Logger("ConfigManager").logger();
      * public final static String CONFIG_DIRECTORY = "worldSpecificConfig";
      * private Configuration general;
      * private File generalConfigFile;

@@ -1,17 +1,13 @@
 package exterminatorJeff.undergroundBiomes.constructs.item;
 
-import java.util.logging.Logger;
-
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemMultiTexture;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
-import Zeno410Utils.Zeno410Logger;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import exterminatorJeff.undergroundBiomes.api.NamedItem;
@@ -28,8 +24,6 @@ public abstract class ItemUndergroundBiomesConstruct extends ItemMultiTexture {
 
     public static int NO_PRIOR_METADATA = 0;
     public static final int subBlocksPerBlock = 8;
-
-    public static Logger logger = new Zeno410Logger("ConstructItems").logger();
 
     private static String[] names(UBStoneTextureProvider appearance, NamedItem name) {
         String[] result = new String[subBlocksPerBlock];
@@ -104,19 +98,6 @@ public abstract class ItemUndergroundBiomesConstruct extends ItemMultiTexture {
 
     public Block structure() {
         return this.structure;
-    }
-
-    public void testRegistration() {
-        logger.info(structure().toString());
-        logger.info(
-            Block.getBlockById(Block.getIdFromBlock(structure()))
-                .toString());
-        logger.info("" + Item.getIdFromItem(this));
-        logger.info("" + Block.getIdFromBlock(structure()));
-        logger.info("" + Block.getIdFromBlock(structure()));
-        logger.info(
-            Item.getItemById(Block.getIdFromBlock(structure()))
-                .toString());
     }
 
     /*

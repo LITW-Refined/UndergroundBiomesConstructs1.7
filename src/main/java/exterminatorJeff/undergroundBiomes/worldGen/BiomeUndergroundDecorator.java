@@ -3,7 +3,6 @@ package exterminatorJeff.undergroundBiomes.worldGen;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Random;
-import java.util.logging.Logger;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -18,7 +17,6 @@ import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
 import Zeno410Utils.BlockLocation;
 import Zeno410Utils.BlockLocationProbe;
 import Zeno410Utils.BlockState;
-import Zeno410Utils.Zeno410Logger;
 import exterminatorJeff.undergroundBiomes.api.BiomeGenUndergroundBase;
 import exterminatorJeff.undergroundBiomes.api.NamedVanillaBlock;
 import exterminatorJeff.undergroundBiomes.api.UBStoneCodes;
@@ -43,7 +41,6 @@ public class BiomeUndergroundDecorator {
     private final CurrentWorldMemento.Manager currentWorldManager = new CurrentWorldMemento.Manager();
     private final ArrayList<BiomeDecoratorCorrector> correctors = new ArrayList<BiomeDecoratorCorrector>();
 
-    public static Logger logger = new Zeno410Logger("BiomeUndergroundDecorator").logger();
     private final HashSet<BlockLocation> beingGenerated = new HashSet<BlockLocation>();
     private static HashSet<BlockLocation> needsRedo = new HashSet<BlockLocation>();
 
@@ -406,13 +403,11 @@ public class BiomeUndergroundDecorator {
         for (int i = 0; i < biomes.length; i++) {
             BiomeGenBase biome = biomes[i];
             if (biome != null) {
-                logger.info(biome.biomeName + " " + biome.toString());
                 BiomeDecorator currentDecorator = biome.theBiomeDecorator;
                 for (BiomeDecoratorCorrector corrector : this.correctors) {
                     BiomeDecorator newDecorator = corrector.corrected(biome, currentDecorator);
                     if (newDecorator != currentDecorator) {
                         // the corrector wants a change
-                        logger.info("changing");
                         biome.theBiomeDecorator = newDecorator;
                         // we're done
                         break;
@@ -426,11 +421,9 @@ public class BiomeUndergroundDecorator {
         this.correctors.add(new VanillaDecoratorCorrector());
         if (ModIds.HIGHLANDS.isLoaded()) {
             this.correctors.add(new HighlandsDecoratorCorrector());
-            UndergroundBiomes.logger.info("Loaded biomes corrector for Highlands");
         }
         if (ModIds.BOP.isLoaded()) {
             this.correctors.add(new BoPDecoratorCorrector());
-            UndergroundBiomes.logger.info("Loaded biomes corrector for Biomes O' Plenty");
         }
     }
 
@@ -469,8 +462,6 @@ public class BiomeUndergroundDecorator {
             // if ((currentDecorator.getClass().equals(standardDecoratorClass))) {
             if ((currentDecorator instanceof BiomeDecoratorHighlands)
                 && !(currentDecorator instanceof CorrectedBiomeDecorator)) {
-                logger.info("corrected decorator for " + biome.biomeName);
-
                 return new CorrectedBiomeDecoratorHighlands(biome, (BiomeDecoratorHighlands) currentDecorator);
             }
             return currentDecorator;

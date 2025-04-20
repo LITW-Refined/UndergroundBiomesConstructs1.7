@@ -22,7 +22,6 @@ public class WatchList {
     private static Accessor<RegistryNamespaced, ObjectIntIdentityMap> intRegistryAccess = new Accessor<RegistryNamespaced, ObjectIntIdentityMap>(
         RegistryNamespaced.class);
 
-    // public static Logger logger = new Zeno410Logger("WatchList").logger();
     public ArrayList<String> problems() {
         ArrayList<String> result = new ArrayList<String>();
         for (Watchable item : items.values()) {

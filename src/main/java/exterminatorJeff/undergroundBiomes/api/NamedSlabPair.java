@@ -1,10 +1,6 @@
 package exterminatorJeff.undergroundBiomes.api;
 
-import java.util.logging.Logger;
-
 import net.minecraft.block.Block;
-
-import Zeno410Utils.*;
 
 /**
  *
@@ -12,7 +8,6 @@ import Zeno410Utils.*;
  */
 public class NamedSlabPair {
 
-    public static final Logger logger = new Zeno410Logger("NamedSlabPair").logger();
     public final NamedBlock half;
     public final NamedBlock full;
 

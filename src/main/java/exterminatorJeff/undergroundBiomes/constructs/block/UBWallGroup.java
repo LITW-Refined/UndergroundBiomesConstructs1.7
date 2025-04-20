@@ -30,12 +30,9 @@ public class UBWallGroup extends UBConstructGroup {
         // item.testRegistration();
         Item toGet = product.stackOf(6)
             .getItem();
-        // ItemUBWall.logger.info(""+Item.getIdFromItem(toGet));
         Item toGetProduct = wallRecipe.getRecipeOutput()
             .copy()
             .getItem();
-        // ItemUBWall.logger.info(""+Item.getIdFromItem(toGetProduct));
-        // ItemUBWall.logger.info(""+Item.getIdFromItem(toGet));
         GameRegistry.addShapelessRecipe(new ItemStack(Blocks.cobblestone_wall, 1), product.stackOf(1));
         // product.stackOf(6).func_77980_a(ItemStack.java:411)
     }

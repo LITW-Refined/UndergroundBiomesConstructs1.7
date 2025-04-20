@@ -265,11 +265,9 @@ abstract public class Settings implements Streamable {
                 value = defaultValue;
             }
             if ((oldValue == null && value() != null)) {
-                ConfigManager.logger.info("updating null to " + value().toString());
                 update(value());
             } else {
                 if (!oldValue.equals(value())) {
-                    ConfigManager.logger.info("updating " + this.key + " to " + value().toString());
                     update(value());
                 }
             }

@@ -1,13 +1,11 @@
 package exterminatorJeff.undergroundBiomes.worldGen;
 
 import java.util.WeakHashMap;
-import java.util.logging.Logger;
 
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import Zeno410Utils.PlaneLocation;
-import Zeno410Utils.Zeno410Logger;
 import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
 
 /**
@@ -17,7 +15,6 @@ import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
 public class UBChunkProvider extends ChunkProviderWrapper {
 
     BiomeUndergroundDecorator decorator;
-    static Logger logger = new Zeno410Logger("UBChunkProvider").logger();
     WeakHashMap<PlaneLocation, Chunk> generatingChunks = new WeakHashMap<PlaneLocation, Chunk>();
     int level = 0;
     public final int dimension;
@@ -25,7 +22,6 @@ public class UBChunkProvider extends ChunkProviderWrapper {
     public UBChunkProvider(IChunkProvider toWrap, BiomeUndergroundDecorator _decorator, int dimension) {
         super(toWrap);
 
-        logger.info("UB generation wrapping " + toWrap.toString());
         decorator = _decorator;
         this.dimension = dimension;
     }

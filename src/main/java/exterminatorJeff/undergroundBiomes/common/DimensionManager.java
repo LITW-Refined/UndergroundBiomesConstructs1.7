@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
 
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
@@ -15,7 +14,6 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import net.minecraftforge.event.terraingen.PopulateChunkEvent;
 
 import Zeno410Utils.Acceptor;
-import Zeno410Utils.Zeno410Logger;
 import cpw.mods.fml.common.Mod.*;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import exterminatorJeff.undergroundBiomes.api.UBAPIHook;
@@ -37,8 +35,6 @@ import exterminatorJeff.undergroundBiomes.worldGen.UBBlockProvider;
  */
 public class DimensionManager implements UBSetProviderRegistry {
 
-    public static Logger logger = new Zeno410Logger("DimensionManager").logger();
-
     private Map<Integer, WorldGenManager> worldGenManagers = new HashMap<Integer, WorldGenManager>();
 
     private boolean serverAdjusted = false;
@@ -56,7 +52,6 @@ public class DimensionManager implements UBSetProviderRegistry {
         @Override
         public void accept(Boolean accepted) {
             inChunkGeneration = accepted;
-            logger.info("Dimensional in-chunk " + accepted);
         }
 
     };
@@ -223,7 +218,6 @@ public class DimensionManager implements UBSetProviderRegistry {
                 if (!includeDimensionIDs.isIncluded(id, excludeDimensionIDs)) continue;
 
                 // serverList[i].getGameRules().setOrCreateGameRule("mobGriefing", "true");
-                logger.info("UB dimension setup " + inChunkGeneration);
                 // do nothing if we're not supposed to use inchunk generation in this dimension
                 if (!inChunkGeneration()) return;
                 if (!inChunkGenerationIncludeIDs.isIncluded(id, inChunkGenerationExcludeIDs)) continue;
@@ -338,7 +332,7 @@ public class DimensionManager implements UBSetProviderRegistry {
             if (this.ubGenerationAllowed(worldGenManager.dimension)) {
                 worldGenManager.redoOres(x, z, world);
             }
-        } else UndergroundBiomes.logger.info("no manager for " + world.toString());
+        }
     }
 
 }

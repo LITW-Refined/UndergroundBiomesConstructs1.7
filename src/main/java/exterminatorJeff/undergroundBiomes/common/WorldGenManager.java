@@ -4,7 +4,6 @@ import java.lang.reflect.*;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
-import java.util.logging.Logger;
 
 import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.World;
@@ -20,7 +19,6 @@ import net.minecraftforge.event.terraingen.PopulateChunkEvent;
 
 import Zeno410Utils.Accessor;
 import Zeno410Utils.PlaneLocation;
-import Zeno410Utils.Zeno410Logger;
 import exterminatorJeff.undergroundBiomes.api.BiomeGenUndergroundBase;
 import exterminatorJeff.undergroundBiomes.api.UndergroundBiomeSet;
 import exterminatorJeff.undergroundBiomes.worldGen.BiomeUndergroundCacheBlock;
@@ -31,8 +29,6 @@ import exterminatorJeff.undergroundBiomes.worldGen.UBChunkProvider;
 import exterminatorJeff.undergroundBiomes.worldGen.VillageStoneChanger;
 
 public class WorldGenManager {
-
-    public static Logger logger = new Zeno410Logger("WorldGenManager").logger();
 
     public final int dimension;
 

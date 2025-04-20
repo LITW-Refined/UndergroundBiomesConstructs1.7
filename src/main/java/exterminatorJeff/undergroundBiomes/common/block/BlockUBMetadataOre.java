@@ -3,7 +3,6 @@ package exterminatorJeff.undergroundBiomes.common.block;
 
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.logging.Logger;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -19,15 +18,12 @@ import net.minecraftforge.common.util.ForgeDirection;
 import Zeno410Utils.BlockState;
 import Zeno410Utils.MinecraftName;
 import Zeno410Utils.Mutable;
-import Zeno410Utils.Zeno410Logger;
 
 /**
  *
  * @author Zeno410
  */
 public class BlockUBMetadataOre extends BlockUBOre {
-
-    public static Logger logger = new Zeno410Logger("BlockUBMetadataOre").logger();
 
     private final int oreMetadata;
     private IBlockAccess currentAccess;

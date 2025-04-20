@@ -2,7 +2,6 @@ package exterminatorJeff.undergroundBiomes.worldGen;
 
 import java.util.List;
 import java.util.WeakHashMap;
-import java.util.logging.Logger;
 
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.util.IProgressUpdate;
@@ -12,14 +11,12 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import Zeno410Utils.PlaneLocation;
-import Zeno410Utils.Zeno410Logger;
 
 public class ChunkProviderWrapper implements IChunkProvider {
 
     private IChunkProvider wrappee;
     private final CurrentWorldMemento.Manager currentWorldManager = new CurrentWorldMemento.Manager();
     private WeakHashMap<PlaneLocation, Chunk> providedChunks = new WeakHashMap<PlaneLocation, Chunk>();
-    public static Logger logger = new Zeno410Logger("ChunkProviderWrapper").logger();
 
     public ChunkProviderWrapper(IChunkProvider toWrap) {
         wrappee = toWrap;

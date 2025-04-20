@@ -46,10 +46,6 @@ public class NamedItem extends Names {
         if (result == null) {
             result = (Item) (Item.itemRegistry.getObject(external()));
             if (result == null) {
-                for (Object key : Item.itemRegistry.getKeys()) {
-                    // UndergroundBiomes.logger.info(key.toString());
-                }
-                // UndergroundBiomes.logger.info(external());
                 throw new RuntimeException();
             }
         }

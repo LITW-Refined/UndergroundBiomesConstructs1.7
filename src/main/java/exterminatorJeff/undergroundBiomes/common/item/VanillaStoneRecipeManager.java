@@ -25,7 +25,6 @@ public class VanillaStoneRecipeManager extends Acceptor<Integer> {
 
     @Override
     public void accept(Integer accepted) {
-        MutableRecipe.logger.info("setting recipe " + accepted);
         recipe.set(recipeFor(accepted));
     }
 

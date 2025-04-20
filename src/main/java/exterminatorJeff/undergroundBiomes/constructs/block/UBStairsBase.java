@@ -8,7 +8,6 @@ package exterminatorJeff.undergroundBiomes.constructs.block;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.logging.Logger;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
@@ -24,7 +23,6 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-import Zeno410Utils.Zeno410Logger;
 import exterminatorJeff.undergroundBiomes.api.NamedBlock;
 import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
 import exterminatorJeff.undergroundBiomes.common.block.BlockMetadataBase;
@@ -35,7 +33,6 @@ import exterminatorJeff.undergroundBiomes.constructs.util.UndergroundBiomesBlock
 public class UBStairsBase extends BlockStairs implements ITileEntityProvider {
 
     private NamedBlock name;
-    static Logger logger = new Zeno410Logger("UBStairsBase").logger();
 
     public UBStairsBase(BlockMetadataBase _baseBlock, NamedBlock namer) {
         super(_baseBlock, 0);

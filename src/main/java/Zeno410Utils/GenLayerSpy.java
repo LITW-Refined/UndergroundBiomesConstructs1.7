@@ -1,7 +1,6 @@
 package Zeno410Utils;
 
 import java.lang.reflect.*;
-import java.util.logging.Logger;
 
 import net.minecraft.world.gen.layer.*;
 
@@ -12,7 +11,6 @@ import net.minecraft.world.gen.layer.*;
 public class GenLayerSpy extends GenLayer {
 
     private final GenLayer spiedUpon;
-    private static Logger logger = new Zeno410Logger("GenLayerSpy").logger();
     private static int lines = 0;
 
     public GenLayerSpy(GenLayer toSpyOn) {

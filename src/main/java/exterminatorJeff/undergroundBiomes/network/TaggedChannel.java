@@ -19,7 +19,6 @@ public final class TaggedChannel<Type> {
 
     private final MessageManager<Type> manager = new MessageManager<Type>();
     private final PacketPipeline.Channel<Named<Type>> channel;
-    // private final Logger logger = new Zeno410Logger("Tagged channel").logger();
     private final PacketPipeline pipeline;
 
     public PacketPipeline.Channel<Named<Type>> channel() {

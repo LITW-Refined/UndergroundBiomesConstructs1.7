@@ -12,7 +12,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.logging.Logger;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -37,12 +36,14 @@ import net.minecraftforge.event.terraingen.PopulateChunkEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.oredict.*;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.google.common.collect.ImmutableList;
 
 import Zeno410Utils.Acceptor;
 import Zeno410Utils.ConfigManager;
 import Zeno410Utils.PlayerDetector;
-import Zeno410Utils.Zeno410Logger;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.Loader;
@@ -68,7 +69,6 @@ import exterminatorJeff.undergroundBiomes.common.block.*;
 import exterminatorJeff.undergroundBiomes.common.command.*;
 import exterminatorJeff.undergroundBiomes.common.item.*;
 import exterminatorJeff.undergroundBiomes.constructs.UndergroundBiomesConstructs;
-import exterminatorJeff.undergroundBiomes.constructs.item.ItemUBStairs;
 import exterminatorJeff.undergroundBiomes.constructs.util.UBCodeLocations;
 import exterminatorJeff.undergroundBiomes.constructs.util.WatchList;
 import exterminatorJeff.undergroundBiomes.intermod.ModOreManager;
@@ -84,7 +84,7 @@ public class UndergroundBiomes implements IWorldGenerator {
         instance = this;
     }
 
-    public static Logger logger = new Zeno410Logger("UndergroundBiomes").logger();
+    public static Logger logger = LogManager.getLogger("UndergroundBiomes");
     private static UndergroundBiomes instance;
 
     public static UndergroundBiomes instance() {
@@ -329,7 +329,6 @@ public class UndergroundBiomes implements IWorldGenerator {
     }
 
     public static void throwIfTesting(RuntimeException toThrow, String logMessage) {
-        logger.info(logMessage);
         if (crashOnProblems()) throw toThrow;
     }
 
@@ -552,9 +551,6 @@ public class UndergroundBiomes implements IWorldGenerator {
         }
 
         constructs.postInit(event);
-        // logger.info(Block.blockRegistry.getNameForObject(igneousStone));
-        // logger.info(Block.blockRegistry.getNameForObject(metamorphicStone));
-        // logger.info(Block.blockRegistry.getNameForObject(sedimentaryStone));
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.TERRAIN_GEN_BUS.register(this);
@@ -566,52 +562,40 @@ public class UndergroundBiomes implements IWorldGenerator {
     }
 
     @EventHandler
-    public void serverLoad(FMLServerAboutToStartEvent event) {
-        // logger.info("server about to start");
-    }
+    public void serverLoad(FMLServerAboutToStartEvent event) {}
 
     @EventHandler
     public void serverLoad(FMLServerStartingEvent event) {
-        // logger.info("server starting");
         event.registerServerCommand(new CommandOreDictifyStone());
         try {
             WorldServer server = event.getServer()
                 .worldServerForDimension(0);
             File worldLocation = server.getChunkSaveLocation();
-            // UndergroundBiomes.logger.info(world.toString() + " " +worldLocation.getAbsolutePath());
             configManager.setWorldFile(worldLocation);
             this.dimensionManager.setupGenerators();
-        } catch (NullPointerException e) {
-            logger.info(e.toString());
-        }
+        } catch (NullPointerException e) {}
     }
 
     @EventHandler
     public void serverLoaded(FMLServerStartedEvent event) {
-        // logger.info("server starting");
-
         if (forceRemap) {
             this.forceConfigIDs();
             GameData.freezeData();
-            logger.info("forcing on remapping");
             this.runningConfigIDs = true;
         }
     }
 
     @EventHandler
     public void serverUnload(FMLServerStoppingEvent event) {
-        // logger.info("server stopping");
         for (Object key : Block.blockRegistry.getKeys()) {
             String name = (String) key;
             Block named = Block.getBlockFromName(name);
             int id = Block.getIdFromBlock(named);
-            // logger.info(name + " "+id);
         }
         for (Object key : Item.itemRegistry.getKeys()) {
             String name = (String) key;
             Item named = (Item) (Item.itemRegistry.getObject(name));
             int id = Item.getIdFromItem(named);
-            // logger.info(name + " "+id);
         }
         if (runningConfigIDs) {
             // defaultIDSetter.redoAsNeeded();
@@ -625,10 +609,8 @@ public class UndergroundBiomes implements IWorldGenerator {
     @EventHandler
     public void onMissingMapping(FMLMissingMappingsEvent event) {
         if (1 > 0) return;
-        logger.info("missing mappings");
         forceRemap = false;
         for (FMLMissingMappingsEvent.MissingMapping missing : event.get()) {
-            // logger.info(missing.name + " " + missing.type.toString());
             if (missing.name.equalsIgnoreCase("UndergroundBiomes:sedimentaryStoneItem")) forceRemap = true;
         }
     }
@@ -638,14 +620,10 @@ public class UndergroundBiomes implements IWorldGenerator {
 
         boolean oldIDs = false;
         if (1 > 0) return;
-        logger.info("remapping");
         ImmutableList<FMLModIdMappingEvent.ModRemapping> remappings = event.remappedIds;
-
         Iterator<FMLModIdMappingEvent.ModRemapping> list = remappings.iterator();
         while (list.hasNext()) {
             FMLModIdMappingEvent.ModRemapping remapping = list.next();
-            // logger.info(remapping.tag + " from " + remapping.oldId + " to " +remapping.newId);
-
             // currently tags drop the fist letter
             if (remapping.tag.equals("inecraft:bed")) {
                 if (remapping.oldId < 256) oldIDs = true;
@@ -670,17 +648,12 @@ public class UndergroundBiomes implements IWorldGenerator {
         }
         // do nothing if ID forcing is off
         if (settings.forceConfigIds.value() == false) return;
-        // logger.info("old IDs "+oldIDs);
         if (oldIDs) {
             this.forceConfigIDs();
-
-            logger.info("forcing");
             this.runningConfigIDs = true;
         }
         if (forceRemap) {
             this.forceConfigIDs();
-
-            logger.info("forcing");
             this.runningConfigIDs = true;
             forceRemap = false;
         }
@@ -1198,7 +1171,6 @@ public class UndergroundBiomes implements IWorldGenerator {
          * WorldServer server = (WorldServer)world;
          * if (world.provider.dimensionId == 0) {
          * File worldLocation = server.getChunkSaveLocation().getParentFile();
-         * //UndergroundBiomes.logger.info(world.toString() + " " +worldLocation.getAbsolutePath());
          * configManager.setWorldFile(worldLocation);
          * }
          * this.dimensionManager.setupGenerators();
@@ -1347,35 +1319,13 @@ public class UndergroundBiomes implements IWorldGenerator {
         if (1 > 0) throw new RuntimeException();
         WatchList forcing = configList();
         try {
-            for (String warning : forcing.problems()) {
-                logger.info(warning);
-            }
-            logger.info("forcing config IDs ");
             forcing.redoAsNeeded();
-            for (String warning : forcing.problems()) {
-                logger.info(warning);
-            }
-        } catch (Exception e) {
-            logger.info("redoerror " + e.toString());
-        }
-
-        WatchList check = new WatchList();
-        check.add(constructs.stoneButton().construct);
-        check.add(constructs.stoneStair().construct);
-        check.add(constructs.stoneWall().construct);
-        for (Item item : ItemUBStairs.instances) {
-            check.add(item);
-        }
-        for (String warning : check.problems()) {
-            // logger.info(warning);
-        }
+        } catch (Exception e) {}
     }
 
     public class EventWatcher {
 
-        public void processEvent(FMLEvent event) {
-            // logger.info(event.getEventType());
-        }
+        public void processEvent(FMLEvent event) {}
     }
 
     private class SettingsSender extends Acceptor<EntityPlayerMP> {

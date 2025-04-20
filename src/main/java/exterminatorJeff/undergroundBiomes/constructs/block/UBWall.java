@@ -7,7 +7,6 @@ package exterminatorJeff.undergroundBiomes.constructs.block;
 
 import java.util.List;
 import java.util.Random;
-import java.util.logging.Logger;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockWall;
@@ -20,14 +19,12 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-import Zeno410Utils.Zeno410Logger;
 import exterminatorJeff.undergroundBiomes.common.UndergroundBiomes;
 import exterminatorJeff.undergroundBiomes.common.block.BlockMetadataBase;
 
 public class UBWall extends BlockWall {
 
     private int storedID;
-    public static Logger logger = new Zeno410Logger("UBWallBase").logger();
     private final BlockMetadataBase baseBlock;
 
     public UBWall(BlockMetadataBase _baseBlock) {

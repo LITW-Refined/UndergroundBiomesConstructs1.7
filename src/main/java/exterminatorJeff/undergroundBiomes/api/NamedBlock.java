@@ -36,7 +36,6 @@ public class NamedBlock extends Names {
         block.setBlockName(external());
         Block current = Block.getBlockById(_id);
         if (current != block) {
-            // UndergroundBiomes.logger.info(this.internal() + "was missing ");
             if (current != null) {
                 throw new RuntimeException(this.internal() + " has been replaced by " + current.toString());
             }

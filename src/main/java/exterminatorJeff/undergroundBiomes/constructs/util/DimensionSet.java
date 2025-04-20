@@ -1,9 +1,6 @@
 package exterminatorJeff.undergroundBiomes.constructs.util;
 
 import java.util.HashSet;
-import java.util.logging.Logger;
-
-import Zeno410Utils.Zeno410Logger;
 
 /**
  * This class contains the logic for manipulating sets of dimensions in
@@ -15,7 +12,6 @@ public class DimensionSet {
 
     private final boolean ignore;
     private HashSet<Integer> members = new HashSet<Integer>();
-    private static Logger logger = new Zeno410Logger("DimensionSet").logger();
 
     public static class Include extends DimensionSet {
 

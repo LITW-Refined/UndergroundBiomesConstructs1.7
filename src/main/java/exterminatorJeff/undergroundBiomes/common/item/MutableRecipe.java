@@ -1,12 +1,8 @@
 
 package exterminatorJeff.undergroundBiomes.common.item;
 
-import java.util.logging.Logger;
-
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
-
-import Zeno410Utils.Zeno410Logger;
 
 /**
  *
@@ -14,7 +10,6 @@ import Zeno410Utils.Zeno410Logger;
  */
 public class MutableRecipe {
 
-    public static Logger logger = new Zeno410Logger("MutableRecipe").logger();
     private IRecipe current;
 
     public void set(IRecipe newRecipe) {
@@ -25,13 +20,6 @@ public class MutableRecipe {
                 .remove(current);
         }
         current = newRecipe;
-        if (current == null) {
-            logger.info("null recipe");
-        } else {
-            logger.info(
-                current.getRecipeOutput()
-                    .getDisplayName());
-        }
         if (current != null) {
             CraftingManager.getInstance()
                 .getRecipeList()

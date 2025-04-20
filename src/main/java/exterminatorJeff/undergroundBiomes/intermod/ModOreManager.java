@@ -1,11 +1,8 @@
 
 package exterminatorJeff.undergroundBiomes.intermod;
 
-import java.util.logging.Logger;
-
 import net.minecraft.block.Block;
 
-import Zeno410Utils.Zeno410Logger;
 import exterminatorJeff.undergroundBiomes.api.UBAPIHook;
 import exterminatorJeff.undergroundBiomes.api.UBOreTexturizer;
 
@@ -15,15 +12,12 @@ import exterminatorJeff.undergroundBiomes.api.UBOreTexturizer;
  */
 public class ModOreManager {
 
-    public static Logger logger = new Zeno410Logger("ModOreManager").logger();
-
     public void register() {
         UBOreTexturizer texturizer = UBAPIHook.ubAPIHook.ubOreTexturizer;
         {
             // Thermal Foundation
             Block thermalFoundationOreBlock = Block.getBlockFromName("ThermalFoundation:Ore");
             if (thermalFoundationOreBlock != null) {
-                logger.info("Thermal Foundation found");
                 // install texturizers
                 texturizer.requestUBOreSetup(
                     thermalFoundationOreBlock,
@@ -78,7 +72,6 @@ public class ModOreManager {
                     String name = (String) key;
                     Block named = Block.getBlockFromName(name);
                     int id = Block.getIdFromBlock(named);
-                    logger.info(name + " " + id);
                     if (name.contains("projectred.exploration.ore")) {
                         projectRedBlock = named;
                         break;
