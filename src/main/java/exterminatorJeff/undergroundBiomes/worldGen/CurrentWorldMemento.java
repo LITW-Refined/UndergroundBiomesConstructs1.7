@@ -7,8 +7,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 
 import Zeno410Utils.Accessor;
-import biomesoplenty.api.biome.BOPBiome;
 import biomesoplenty.api.biome.BOPInheritedBiome;
+import exterminatorJeff.undergroundBiomes.intermod.ModIds;
 
 /**
  *
@@ -63,11 +63,10 @@ public class CurrentWorldMemento {
         private Accessor<BOPInheritedBiome, BiomeGenBase> inheritedBiomeAccess;
 
         public Manager() {
-            try {
-                Class bopBiomeclass = BOPBiome.class;// to make sure it's there
+            if (ModIds.BOP.isLoaded()) {
                 bopHot = true;
                 inheritedBiomeAccess = new Accessor<BOPInheritedBiome, BiomeGenBase>(BiomeGenBase.class);
-            } catch (java.lang.NoClassDefFoundError e) {
+            } else {
                 bopHot = false;
             }
         }

@@ -29,6 +29,7 @@ import exterminatorJeff.undergroundBiomes.intermod.BiomeGenUBBadlands;
 import exterminatorJeff.undergroundBiomes.intermod.BiomeGenUBCliffs;
 import exterminatorJeff.undergroundBiomes.intermod.BiomeGenUBDesertMountains;
 import exterminatorJeff.undergroundBiomes.intermod.BiomeGenUBRockMountains;
+import exterminatorJeff.undergroundBiomes.intermod.ModIds;
 import highlands.biome.BiomeDecoratorHighlands;
 import highlands.biome.BiomeGenBadlands;
 import highlands.biome.BiomeGenCliffs;
@@ -423,17 +424,12 @@ public class BiomeUndergroundDecorator {
 
     private void setupCorrectors() {
         this.correctors.add(new VanillaDecoratorCorrector());
-        try {
+        if (ModIds.HIGHLANDS.isLoaded()) {
             this.correctors.add(new HighlandsDecoratorCorrector());
-        } catch (java.lang.NoClassDefFoundError e) {
-            // no Highlands; nothing to do;
         }
-        try {
+        if (ModIds.BOP.isLoaded()) {
             this.correctors.add(new BoPDecoratorCorrector());
-        } catch (java.lang.NoClassDefFoundError e) {
-            // no BoP; nothing to do;
         }
-
     }
 
     private class VanillaDecoratorCorrector implements BiomeDecoratorCorrector {
@@ -480,7 +476,7 @@ public class BiomeUndergroundDecorator {
     }
 
     private void arrangeHighlandsCompatibility() {
-        try {
+        if (ModIds.HIGHLANDS.isLoaded()) {
             BiomeGenBase[] biomes = BiomeGenBase.getBiomeGenArray();
             for (int i = 0; i < biomes.length; i++) {
                 BiomeGenBase biome = biomes[i];
@@ -499,7 +495,6 @@ public class BiomeUndergroundDecorator {
                     }
                 }
             }
-        } catch (java.lang.NoClassDefFoundError e) {}
-
+        }
     }
 }
