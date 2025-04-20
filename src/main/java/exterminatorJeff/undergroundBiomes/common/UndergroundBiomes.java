@@ -76,7 +76,7 @@ import exterminatorJeff.undergroundBiomes.network.PacketPipeline;
 import exterminatorJeff.undergroundBiomes.worldGen.BiomeUndergroundDecorator;
 import exterminatorJeff.undergroundBiomes.worldGen.OreUBifier;
 
-@Mod(modid = "UndergroundBiomes", name = "Underground Biomes", version = "0.8.beta57")
+@Mod(modid = "UndergroundBiomes", name = "Underground Biomes", version = Tags.VERSION)
 
 public class UndergroundBiomes implements IWorldGenerator {
 
